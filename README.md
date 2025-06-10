@@ -60,12 +60,16 @@ The data is not published in the repository on GitHub and is sent only directly 
 
 The data from the anonymised in-depth interviews are split into train (40 informants) and test (12 informants). 
 
-The data are .txt files in Russian where real people talk free-form about their consumer behaviour, perceptions of the situation in the economy and attitudes towards past economic crises and the central bank.
+The data are .txt files in Russian where real people talk free-form about their consumer behaviour, perceptions of the situation in the economy and attitudes towards past economic crises and the central bank. The files are stored in [a folder on Google Drive](https://drive.google.com/drive/folders/1ZeObSPwq7RPZFO86SH1kmT72c7_vwgMF?usp=drive_link). Only team members working on the project will have access to the folder.
 
 Data structure:
+
 1.1. Interviews as texts.
+
 1.2.	Basic sociodemographic characteristics of each informant: gender, age, marital status, household size, city of residence, etc.
+
 1.3.	Quantitative assessment of inflation expectations by each informant (for example: 5%, 10%, 12%, etc.).
+
 1.4.	Binary variable of the informant's response to the question about whether or not he trusts the central bank (there is also a verbal answer to this question with argumentation in the interview text).
 
 ## ✔️ Evaluation of outcome
