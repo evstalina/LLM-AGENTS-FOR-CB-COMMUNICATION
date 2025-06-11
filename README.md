@@ -45,7 +45,7 @@ At the end of the work, participants hand over the prompts/text files/codes of s
 The data is not published in the repository on GitHub and is sent only directly to the team members who will work on the project without the possibility of public distribution of this data. After the project is finished, copies of the original data should be deleted.
 
 
-The data are .txt files in Russian where real people talk free-form about their consumer behaviour, perceptions of the situation in the economy and attitudes towards past economic crises and the central bank. The files are stored in [a folder on Google Drive](https://drive.google.com/drive/folders/1ZeObSPwq7RPZFO86SH1kmT72c7_vwgMF?usp=drive_link). Only team members working on the project will have access to the folder.
+The data are .txt files in Russian where real people talk free-form about their consumer behaviour, perceptions of the situation in the economy and attitudes towards past economic crises and the central bank. The files are stored in [a folder on Google Drive](https://drive.google.com/drive/folders/16NP0citkOsa4BYz_XCmaWKQMzvtgDDTq?usp=drive_link). Only team members working on the project will have access to the folder.
 
 
 
