@@ -1,84 +1,61 @@
-# LLM agents for forecasting public perceptions of central banks
+# Synthetic focus group for predicting and improving public reaction to central bank communication
 **GitHub Repository: `LLM-AGENTS-FOR-CB-COMMUNICATION`**
 
-During the hackathon, participants will be challenged to create **LLM-agents** of real people using anonymised data from in-depth interviews, as well as their sociodemographic characteristics, and to identify the **connections between inflation expectations and informants' narratives**. These LLM-agents will help in **forecasting public responses to central bank communication**.  
+During the hackathon, participants will be challenged to create **a synthetic focus group of several LLM avatars of real people** with different sentiments towards the central bank, **calibrate them** on publications that in real life have led to reputational risks for the central bank, and finally **rewrite the test material** with the help of the SFG discussion in such a way that **the created SFG improves its sentiment** towards the text and the central bank.  
 
 # Problem statement 
 The general public is one of the most challenging audiences for a central bank. At the same time, it plays a key role in economic decision-making and determines the dynamics of macroeconomic indicators. The higher the trust in the central bank, the lower the inflation expectations and the better the decisions of economic agents. Central banks manage the decisions of agents through communication, which is inevitably associated with increased risks. 
 
-The use of LLM agents for pre-testing communications provides new opportunities for regulators' policy. With such tests, it is now possible to determine in advance how a certain communication will influence the economic decisions of a household. Joint LLM-agents can be used as focus groups to test central bank communication.
+The use of LLM agents for pre-testing communications provides new opportunities for regulators' policy. With such tests, it is now possible to determine in advance how a certain communication will influence the economic decisions of a household. Joint LLM-agents can be used as focus groups to test central bank communication and further improvement.
 
-## 🎯 Objective
-- **Create an AI avatar** of each agent so they respond as closely as possible to the question about their inflation expectations and trust in the central bank. 
-- This requires identifying the main factors influencing this and developing a valid framework for answering these questions, in which new informants will enter the test. In doing so, agents will have to give reasons for their level of trust/distrust, rather than simply saying ‘yes’ or ‘no’. In addition, the raw data from in-depth interviews will have to be cleaned of unnecessary information, keeping in mind the garbage in - garbage out principle.
-- At the end of the work, participants hand over the prompts/text files/codes of successful LLM agents to the curator.
+## 🎯 Algorithm of work on the project, objectives and data
+
+1. Review the relevant literature:
+
+   1. Zhang T. et al. Focus Agent: LLM-Powered Virtual Focus Group // Proceedings of the 24th ACM International Conference on   Intelligent Virtual Agents. – 2024. – С. 1-10.
+   3. Krueger R. A. Focus groups: A practical guide for applied research. – Sage publications, 2014.
+   5. Filipova, A.G., Abrosimova, E.E., Zubova, O.G. (2025). The method of synthetic focus groups in the context of digital transformation of sociological research. Sociodynamics, 5, 1–17. https://doi.org/10.25136/2409-7144.2025.5.74430
+2.	Create LLM avatars for each real person given based on their interviews (a sample of 10 interviews). Ensure a closed loop so that the LLM is not trained on real person interview data.
+
+| № | "Name"     | Confidence in the central bank | Inflation expectations, % | Gender | Age | City | Education | Marital status |
+|---|------------|:------------------------------:|:-------------------------:|:------:|:---:|:----:|:---------:|:--------------:|                                              
+| 1 | Angelina   |               1                |            N/A            |    F   |  38 |Barnaul|College|Married|
+| 2 | Alexey     |               1                |             5             |    M   |  22 |Ekaterinburg|College|Single|
+| 3 | Antonina   |               0                |            N/A            |    F   |  65 |Ekaterinburg|College|Widow|
+| 4 | Konstantin |              N/A               |            N/A            |    M   |  58 |Barnaul|College|Married|
+| 5 | Gleb       |               1                |             25            |    M   |  54 |Ekaterinburg|PhD|Married|
+| 6 | Larisa     |               0                |            N/A            |    F   |  46 |Novosibirsk|College|Married|
+| 7 | Pavel      |               1                |             50            |    M   |  55 |Vladivostok|Economic college|Married|
+| 8 | Viktoria   |               0                |             20            |    F   |  22 |Pskov|College|Single|
+| 9 | Mikhail    |               0                |            N/A            |    M   |  65 |Ryazan|College|Married|
+| 10 | Igor      |               0                |            N/A            |    M   |  64 |Perm|Economic college|Married|
+
+3.	Calibrate LLM agents on publications that in real life led to reputational risks for the central bank, i.e.:
+    1. Agents trusting the CB should take a positive or neutral view of communication treatment.
+    2. Not trusting – negatively.
+    3. Indifferent ( only ‘Konstantin’) - neutrally.
+4. Create a synthetic focus group of 10 LLM-agents, propose a technical solution for working with them. Provide a closed loop in it so that the LLM is not trained on interview data from real people.
+5. Discuss the text of the Bank of Russia publication with the focus group ([April Commentary on Consumer Price Dynamics](https://www.cbr.ru/Collection/Collection/File/55880/CPD_2025-4.pdf) - only text, no tables) and improve its quality based on the responses received.
+
+At the end of the work, participants hand over the prompts/text files/codes of successful LLM agents as well as the SFG compilation to the curator. 
 
 ---
 ## ❗ Data Disclamer 
 
 The data is not published in the repository on GitHub and is sent only directly to the team members who will work on the project without the possibility of public distribution of this data. After the project is finished, copies of the original data should be deleted.
 
-## 📥 Data
-
-| Characteristics        | Number of informants | Share of sample |
-|------------------------|:--------------------:|:---------------:|
-|**City**                                                         |
-|  Moscow                |           5          |       9.6%      |
-|  Saint Petersburg      |           2          |       3.8%      |
-|  Ekaterinburg          |           8          |       15.4%     |
-|  Krasnoyarsk           |           5          |       9.6%      |
-|  Novosibirsk           |           9          |       17.3%     |
-|  Perm                  |           5          |       9.6%      |
-|  Pskov                 |           3          |       5.8%      |
-|  Stavropol             |           5          |       9.6%      |
-|  Vladivostok           |           5          |       9.6%      |
-|  Barnaul               |           4          |       7.8%      |
-|  Elista                |           1          |       1.9%      |
-|**Gender**                                                       |
-|  Male                  |           29         |       55.8%     |
-|  Female                |           23         |       44.2%     |
-|**Age**                                                          |
-|  under 25 y.o.         |           7          |       13.5%     |
-|  26-35 y.o.            |           10         |       19.2%     |
-|  36-45 y.o.            |           12         |       23.1%     |
-|  46-55 y.o.            |           13         |       25.0%     |
-|  56-65 y.o.            |           5          |       9.6%      |
-|  over 65 y.o.          |           5          |       9.6%      |
-|**Education**                                                    |
-|  Secondary             |           3          |       5.8%      |
-|  Secondary specialised |           4          |       7.7%      |
-|  undergraduate degree  |           1          |       1.9%      |
-|  higher+[^1]           |           36         |       69.2%     |
-|  higher economic+[^2]  |           8          |       15.4%     |
-|**Household size**                                               |
-|  1 person              |           19         |       36.5%     |
-|  2 or more persons     |           33         |       63.5%     |
-| **Total**              |           **52**     |       **100.0%**|
-
-[^1]: Including non-economic academic degrees.
-[^2]: Including economic academic degrees.
-
-The data from the anonymised in-depth interviews are split into train (40 informants) and test (12 informants). 
 
 The data are .txt files in Russian where real people talk free-form about their consumer behaviour, perceptions of the situation in the economy and attitudes towards past economic crises and the central bank. The files are stored in [a folder on Google Drive](https://drive.google.com/drive/folders/1ZeObSPwq7RPZFO86SH1kmT72c7_vwgMF?usp=drive_link). Only team members working on the project will have access to the folder.
 
-Data structure:
 
-1.1. Interviews as texts.
-
-1.2.	Basic sociodemographic characteristics of each informant: gender, age, marital status, household size, city of residence, etc.
-
-1.3.	Quantitative assessment of inflation expectations by each informant (for example: 5%, 10%, 12%, etc.).
-
-1.4.	Binary variable of the informant's response to the question about whether or not he trusts the central bank (there is also a verbal answer to this question with argumentation in the interview text).
 
 ## ✔️ Evaluation of outcome
-On the test, participants are presented with 12 new agents for which only items 1.1 and 1.2 (text interviews and sociodemographic characteristics) are known. 
 
-Thus, the winner team is defined on the basis of two tests:
+Based on the insights from the synthetic focus group, teams must propose a revised version of the central bank communication. The improved text will be evaluated both qualitatively and quantitatively, including through its re-assessment by the same SFG: does the revised version increase overall favorability among the agents, particularly among skeptics?
 
-<ins>Test 1</ins>: We ask agents ‘What do you expect inflation to be in a year from now?’ and estimate whose inflation expextations are closer to those of real informants. 
+Bonus points will be awarded for:
+- Innovative prompting strategies.
+- Multi-agent coordination mechanisms.
+- Inclusion of sentiment-shift tracking over the course of the discussion.
 
-<ins>Test 2</ins>: We ask agents ‘Are you rather trust the central bank or not?’
-
-The winner is the team that most accurately identifies the inflation expectations and trust of new informants from their narratives on the test task.
+All deliverables — including code, prompts, revised text, and logs of group interactions — must be submitted in reproducible format.
